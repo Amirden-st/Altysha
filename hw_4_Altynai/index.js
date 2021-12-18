@@ -46,6 +46,14 @@ var categories = products.reduce((tally, product) => {
     return tally
 }, {})
 
+// Вы были близко)
+// var categories = products.reduce((tally, product) => {
+//     мы считаем количество продуктов в каждой категории. Поэтому:
+//     tally[product.category] = (tally[product.category] || 0 ) + 1;
+//                                      Вы придумали отличное условие!
+//     return tally
+// }, {})
+
 console.log(categories);
 
 //              Задание 4
@@ -67,9 +75,11 @@ function render(){
 render()
 
 //     Задание 1
-
+//          переменные/параметры лучше называть так, чтобы было понятно что она в себе хранит.  
+//          Лучше было вместо categ назвать параметр product, т.к. то, что туда приходит представляет собой продукт
 // var eat = products.filter(function(categ) {
-//         if(categ.category == 'food'){
+//         Нужно было получить категории food и tool. 
+//         if(categ.category == 'food') {  // Поэтому здесь лучше написать if (categ.category === 'food' || categ.category === 'tool')
 //             return true;
 //         } else {
 //             return false;
@@ -79,8 +89,11 @@ render()
 
 
 
-
 //              Задание 2
+// Нужно было получить массив имён
+// var productNames = products.map(product => {
+//     return product.name
+// }) 
 // function render(){
 //     products.map(function(product){
 //         list.innerHTML += `
